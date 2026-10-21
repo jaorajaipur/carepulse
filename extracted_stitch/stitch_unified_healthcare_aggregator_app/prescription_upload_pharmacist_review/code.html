@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#80d0ff", "surface-container": "#e5eeff", "on-error": "#ffffff", "background": "#f8f9ff", "on-primary-fixed": "#001e2d", "on-tertiary": "#ffffff", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "on-primary-fixed-variant": "#004c6a", "inverse-primary": "#80d0ff", "surface-variant": "#d3e4fe", "primary": "#006388", "surface-container-low": "#eff4ff", "tertiary-fixed": "#ffdad3", "surface": "#f8f9ff", "on-tertiary-fixed-variant": "#87200b", "outline": "#6f7880", "secondary-fixed": "#6ffbbe", "outline-variant": "#bec8d0", "on-surface": "#0b1c30", "secondary": "#006c49", "primary-container": "#007dab", "surface-container-high": "#dce9ff", "surface-dim": "#cbdbf5", "tertiary-fixed-dim": "#ffb4a4", "on-surface-variant": "#3f484f", "on-primary-container": "#fcfcff", "inverse-surface": "#213145", "on-secondary-fixed": "#002113", "on-primary": "#ffffff", "primary-fixed": "#c5e7ff", "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "tertiary": "#a5361e", "tertiary-container": "#c64d34", "surface-tint": "#00658c", "on-secondary-fixed-variant": "#005236", "error": "#ba1a1a", "on-tertiary-fixed": "#3e0500", "on-tertiary-container": "#fffbff", "on-background": "#0b1c30", "secondary-container": "#6cf8bb", "secondary-fixed-dim": "#4edea3", "inverse-on-surface": "#eaf1ff", "on-secondary-container": "#00714d", "on-error-container": "#93000a" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter": "1rem", "margin-md": "1.25rem", "space-2xl": "2rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "gutter-sm": "0.75rem" }, "fontFamily": { "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;-webkit-tap-highlight-color:transparent;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="CarePulse Health Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALHDIaBK_Q84tpsZWsg2t_Jf3_hrixdPuPUikzoYPlSctUW5Tyc3gMg5X8R7NuyGAfpsuWFyhseGM1GVyhyGOPdGElP5NhWZXFw_RthHyy4yKv81irynDZ9FyaqYzKTtvpdvQQdEyOhuJtpS6K5e93zsAM6GuTzPbJQ6clMpy0Ky1aQiYuIT46IUkqvq42UBeWWPPg_VGvGDROelSWGWDZ8Vu5pdOPuuAvVbq9L8Ia_rTdo-IX31nPzg"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">CarePulse</span><span class="text-xs text-on-surface-variant font-medium">•</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Pharmacy</span></div><button class="flex items-center gap-0.5 text-left group min-w-0"><span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0">location_on</span><span class="font-label-lg text-label-lg text-on-surface truncate group-hover:text-primary transition-colors">Indiranagar, Bengaluru</span><span class="material-symbols-outlined text-outline text-[16px] flex-shrink-0">expand_more</span></button></div></div><div class="flex items-center gap-1 flex-shrink-0"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all active:scale-95"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all active:scale-95"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span></button><button aria-label="Profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 active:scale-95 transition-all ml-0.5"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI-joKq4K0E_YOGMvZzI0j_bu-4rLwXn-m5IBMDp4BKazZK469AYbECdLIzzbmcErGWRYIkt5ERQThSsl9gTQsKvhwjd0nyoTi3MmEpBdhpyxbOKV2J0HUHBJXdpa1tm2u2Q_foI7f4kqH52AYwPqBjWHXTsxG2gwmJ-M1nenVoD59Mh1PJuFRpdKaJYdb66wMKBz9-XKuH7pPORtyu3aKz4Awf9FzMNX5xkDbXf9on6EB62QQtBD9MQ"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Backdrop representing active pharmacy triage sheet modal context -->
+<div class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-30 pointer-events-none transition-opacity duration-300"></div>
+<!-- Main Sheet / Modal Container (Scrollable) -->
+<div class="relative z-40 w-full bg-surface-container-lowest rounded-t-3xl shadow-[0_-8px_30px_rgba(0,99,136,0.12)] px-margin pb-6 pt-3 flex flex-col gap-space-lg">
+<!-- Grabber Handle Bar for Modal Cue -->
+<div class="w-12 h-1.5 rounded-full bg-surface-container-highest mx-auto"></div>
+<!-- Modal Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">prescriptions</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Upload Prescription</h2>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                Verified
+              </span>
+</div>
+</div>
+</div>
+<!-- Dismiss / Close Action -->
+<button aria-label="Close modal" class="w-9 h-9 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Verified clinical pharmacists verify dosage &amp; generate your digital cart in <span class="font-semibold text-primary">&lt; 5 mins</span>.
+      </p>
+<!-- Security / Regulatory Strip -->
+<div class="mt-1 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md w-fit">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span>NABL &amp; State Pharmacy Council compliant • 256-bit HIPAA encryption</span>
+</div>
+</div>
+<!-- Upload Methods Switcher / Cards -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Choose Upload Method</span>
+<div class="grid grid-cols-3 gap-2">
+<!-- Option 1: Live Camera OCR -->
+<button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center group active:scale-95" type="button">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-1.5 shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">document_scanner</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Camera Scan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Live edge crop</span>
+</button>
+<!-- Option 2: Gallery / PDF (Current Active/Checked State) -->
+<button class="relative flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container-high text-center group active:scale-95 shadow-sm" type="button">
+<div class="absolute top-2 right-2 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[12px] font-bold">check</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center mb-1.5 shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">Device Upload</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">PDF, JPG &lt;15MB</span>
+</button>
+<!-- Option 3: Saved Prescriptions Archive -->
+<button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center group active:scale-95" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant mb-1.5 shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">folder_special</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface">Past Rx</span>
+<span class="px-1.5 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">3</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Quick reorder</span>
+</button>
+</div>
+</div>
+<!-- Active Uploaded Rx Preview Card -->
+<div class="flex flex-col rounded-2xl bg-surface-container-low p-space-md shadow-sm gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<!-- Thumbnail with Realistic Prescription Preview -->
+<div class="relative w-16 h-20 rounded-xl overflow-hidden bg-surface-container-highest flex-shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A clean top-down photograph of an authentic medical doctor prescription slip on white paper with stethoscope placed nearby. Medical diagnosis cursive notes, rx symbol header, clinical stamp and blue ink signatures, softly illuminated by warm morning clinic window light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1VeTJNKov99451Ym5Wcp-a2rx3KqBmkFpKikd-X5GjoCRzUWnCUU0W5J9l-5adEZOtJlUiHJiog8gBHrttvRr--wByXiFjcD_xjpWVltWaqYZcsbBV2xKZB6P-ufdfrQO0gFGDvXHZrpX6umKRh4zWJ7g2Ud7sjlr3vow3XeU-6dNI1ILcqNA0pQwp89UR8dBN012pwx_9pqFkdF6M06gwuKwWuZT_gKc7z0q7OE-yph5wQk5_9_YQ"/>
+<div class="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-on-surface/80 text-surface-container-lowest font-label-sm text-label-sm">
+              JPG
+            </div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Rx_Dr_Kapoor_Cardio.jpg</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span>2.4 MB</span>
+<span>•</span>
+<span class="text-secondary font-medium">Uploaded just now</span>
+</div>
+<!-- Secondary actions for file -->
+<div class="flex items-center gap-2 mt-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md shadow-xs active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]">zoom_in</span>
+                View Full
+              </button>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-xs active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]">sync</span>
+                Replace
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Live Detection Banner & Badges -->
+<div class="mt-1 rounded-xl bg-surface-container-lowest p-2.5 flex flex-col gap-1.5 shadow-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<span class="font-label-md text-label-md text-primary font-semibold">AI Pre-Scan Complete</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/50 px-2 py-0.5 rounded-full">3 Meds Found</span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-0.5">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Metformin 500mg SR <span class="text-on-surface-variant text-[11px]">(2x daily)</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Telmisartan 40mg <span class="text-on-surface-variant text-[11px]">(1x morning)</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Atorvastatin 10mg
+          </span>
+</div>
+</div>
+</div>
+<!-- Patient Selection & Details -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Prescription For</span>
+<button class="font-label-md text-label-md text-primary hover:underline">+ New Member</button>
+</div>
+<!-- Segmented Patient Avatars -->
+<div class="grid grid-cols-3 gap-2">
+<!-- Self (Arjun) - Selected -->
+<div class="flex items-center gap-2 p-2 rounded-2xl bg-primary-fixed text-on-primary-fixed shadow-sm">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-label-md flex-shrink-0">
+            A
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate">Arjun (Self)</span>
+<span class="font-body-sm text-body-sm text-on-primary-fixed-variant">32 yrs • M</span>
+</div>
+</div>
+<!-- Mother (Meenakshi) -->
+<div class="flex items-center gap-2 p-2 rounded-2xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-all cursor-pointer">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant font-bold text-label-md flex-shrink-0">
+            M
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate">Meenakshi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">64 yrs • F</span>
+</div>
+</div>
+<!-- Add Family Member -->
+<div class="flex items-center justify-center gap-1 p-2 rounded-2xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span class="font-label-md text-label-md">Add</span>
+</div>
+</div>
+<!-- Doctor / Clinic Tag -->
+<div class="flex flex-col gap-1 mt-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Doctor / Hospital (Optional)</label>
+<div class="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">stethoscope</span>
+<input class="bg-transparent border-none outline-none font-body-md text-body-md text-on-surface w-full p-0 placeholder-outline focus:ring-0" type="text" value="Dr. Meera Kapoor (Fortis Heart Clinic)"/>
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Fulfillment Preferences & Smart Triage Settings -->
+<div class="flex flex-col gap-space-sm rounded-2xl bg-surface-container-low p-space-md shadow-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Fulfillment &amp; Review Preferences</span>
+<!-- Preference 1: Call before confirming (Toggle ON) -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">phone_callback</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface">Call me before confirming order</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Pharmacist will call within 3 minutes to confirm generic brand alternatives or clarify dosage.
+            </p>
+</div>
+</div>
+<!-- Active Toggle Switch -->
+<button aria-pressed="true" class="w-11 h-6 rounded-full bg-primary p-0.5 flex items-center justify-end flex-shrink-0 transition-colors" type="button">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm"></div>
+</button>
+</div>
+<div class="h-px bg-surface-container-highest w-full my-0.5"></div>
+<!-- Preference 2: Jan Aushadhi / Generic Substitution -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">savings</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-md text-label-md text-on-surface">Auto-substitute Jan Aushadhi / Generics</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Save up to 70%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Identical salt composition, CDSCO bio-equivalent certified.
+            </p>
+</div>
+</div>
+<div class="w-5 h-5 rounded-md bg-secondary flex items-center justify-center text-on-secondary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px] font-bold">check</span>
+</div>
+</div>
+<div class="h-px bg-surface-container-highest w-full my-0.5"></div>
+<!-- Preference 3: Course Duration -->
+<div class="flex items-center justify-between gap-space-sm pt-0.5">
+<span class="font-label-md text-label-md text-on-surface">Prescription Duration</span>
+<div class="flex items-center gap-1.5 p-1 rounded-full bg-surface-container-highest">
+<button class="px-3 py-1 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md shadow-xs font-semibold">
+            Full (30 Days)
+          </button>
+<button class="px-3 py-1 rounded-full text-on-surface-variant font-label-md text-label-md hover:text-on-surface">
+            15 Days Trial
+          </button>
+</div>
+</div>
+</div>
+<!-- Verification Timeline / Speed Guarantee -->
+<div class="rounded-2xl bg-surface-container-high/60 p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Pharmacy Fulfillment Protocol</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Avg. 3 mins triage</span>
+</div>
+<!-- Step Indicator -->
+<div class="grid grid-cols-3 gap-2 relative">
+<!-- Step 1 Done -->
+<div class="flex flex-col items-center text-center">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-label-sm shadow-xs mb-1">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">1. Uploaded</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">OCR ready</span>
+</div>
+<!-- Step 2 In-Progress -->
+<div class="flex flex-col items-center text-center">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-label-sm shadow-xs mb-1 animate-pulse">
+            2
+          </div>
+<span class="font-label-sm text-label-sm text-primary font-bold">2. Rx Review</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Doctor checked</span>
+</div>
+<!-- Step 3 Cart -->
+<div class="flex flex-col items-center text-center opacity-70">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold text-label-sm mb-1">
+            3
+          </div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">3. Cart Ready</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Free delivery</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">
+          100% Genuine batch-coded drugs strictly audited under Drugs &amp; Cosmetics Act.
+        </p>
+</div>
+</div>
+<!-- Sticky Bottom CTA Area -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full h-12 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-between px-5 shadow-lg active:scale-[0.99] transition-all" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+<span>Submit for Pharmacist Review</span>
+</div>
+<div class="flex items-center gap-1.5 bg-on-primary/20 px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-primary">
+<span>ETA 3 Mins</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</button>
+<div class="flex items-center justify-center gap-2 py-1">
+<span class="material-symbols-outlined text-tertiary text-[18px]">call</span>
+<button class="font-label-md text-label-md text-tertiary hover:underline">
+          Need urgent help? Call Clinical Pharmacist Hotline
+        </button>
+</div>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,99,136,0.06)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-between h-16 px-space-xs max-w-md mx-auto"><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="home" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">home</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Home</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="doctors-&amp;-clinics" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">stethoscope</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Doctors</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="diagnostics-&amp;-labs" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">biotech</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Labs</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="pharmacy" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">medication</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Pharmacy</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="home-&amp;-elder-care" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">elderly</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Elder Care</span></a></div></nav></body></html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#80d0ff", "surface-container": "#e5eeff", "on-error": "#ffffff", "background": "#f8f9ff", "on-primary-fixed": "#001e2d", "on-tertiary": "#ffffff", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "on-primary-fixed-variant": "#004c6a", "inverse-primary": "#80d0ff", "surface-variant": "#d3e4fe", "primary": "#006388", "surface-container-low": "#eff4ff", "tertiary-fixed": "#ffdad3", "surface": "#f8f9ff", "on-tertiary-fixed-variant": "#87200b", "outline": "#6f7880", "secondary-fixed": "#6ffbbe", "outline-variant": "#bec8d0", "on-surface": "#0b1c30", "secondary": "#006c49", "primary-container": "#007dab", "surface-container-high": "#dce9ff", "surface-dim": "#cbdbf5", "tertiary-fixed-dim": "#ffb4a4", "on-surface-variant": "#3f484f", "on-primary-container": "#fcfcff", "inverse-surface": "#213145", "on-secondary-fixed": "#002113", "on-primary": "#ffffff", "primary-fixed": "#c5e7ff", "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "tertiary": "#a5361e", "tertiary-container": "#c64d34", "surface-tint": "#00658c", "on-secondary-fixed-variant": "#005236", "error": "#ba1a1a", "on-tertiary-fixed": "#3e0500", "on-tertiary-container": "#fffbff", "on-background": "#0b1c30", "secondary-container": "#6cf8bb", "secondary-fixed-dim": "#4edea3", "inverse-on-surface": "#eaf1ff", "on-secondary-container": "#00714d", "on-error-container": "#93000a" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter": "1rem", "margin-md": "1.25rem", "space-2xl": "2rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "gutter-sm": "0.75rem" }, "fontFamily": { "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;-webkit-tap-highlight-color:transparent;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="CarePulse Health Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALHDIaBK_Q84tpsZWsg2t_Jf3_hrixdPuPUikzoYPlSctUW5Tyc3gMg5X8R7NuyGAfpsuWFyhseGM1GVyhyGOPdGElP5NhWZXFw_RthHyy4yKv81irynDZ9FyaqYzKTtvpdvQQdEyOhuJtpS6K5e93zsAM6GuTzPbJQ6clMpy0Ky1aQiYuIT46IUkqvq42UBeWWPPg_VGvGDROelSWGWDZ8Vu5pdOPuuAvVbq9L8Ia_rTdo-IX31nPzg"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">CarePulse</span><span class="text-xs text-on-surface-variant font-medium">•</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Diagnostics &amp; Labs</span></div><button class="flex items-center gap-0.5 text-left group min-w-0"><span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0">location_on</span><span class="font-label-lg text-label-lg text-on-surface truncate group-hover:text-primary transition-colors">Indiranagar, Bengaluru</span><span class="material-symbols-outlined text-outline text-[16px] flex-shrink-0">expand_more</span></button></div></div><div class="flex items-center gap-1 flex-shrink-0"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all active:scale-95"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all active:scale-95"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span></button><button aria-label="Profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 active:scale-95 transition-all ml-0.5"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI-joKq4K0E_YOGMvZzI0j_bu-4rLwXn-m5IBMDp4BKazZK469AYbECdLIzzbmcErGWRYIkt5ERQThSsl9gTQsKvhwjd0nyoTi3MmEpBdhpyxbOKV2J0HUHBJXdpa1tm2u2Q_foI7f4kqH52AYwPqBjWHXTsxG2gwmJ-M1nenVoD59Mh1PJuFRpdKaJYdb66wMKBz9-XKuH7pPORtyu3aKz4Awf9FzMNX5xkDbXf9on6EB62QQtBD9MQ"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Banner -->
+<div class="px-margin pt-space-md pb-space-xs">
+<div class="relative overflow-hidden rounded-lg bg-gradient-to-r from-primary via-primary-container to-secondary p-space-lg text-on-primary shadow-lg shadow-primary/10">
+<div class="relative z-10 flex flex-col gap-1 max-w-[80%]">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/20 backdrop-blur-md w-fit">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary">100% NABL &amp; CAP Accredited</span>
+</div>
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-on-primary">Diagnostic &amp; Lab Tests</h2>
+<p class="font-body-sm text-body-sm text-surface-container-high opacity-95">Painless sample pickup in 30 mins or book walk-ins nearby.</p>
+</div>
+<div class="absolute right-[-14px] bottom-[-18px] opacity-25 pointer-events-none">
+<span class="material-symbols-outlined text-[118px] leading-none text-surface-container-lowest">chips</span>
+</div>
+</div>
+</div>
+<!-- Booking Mode Sticky Switcher -->
+<div class="sticky top-16 z-30 px-margin py-space-sm bg-surface/90 backdrop-blur-md">
+<div class="flex p-1 rounded-full bg-surface-container-highest shadow-inner" id="pickup-mode-toggle">
+<button class="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md transition-all active:scale-95" data-mode="home" type="button">
+<span class="material-symbols-outlined text-[18px]">electric_moped</span>
+<span>Home Sample Pickup</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-full text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 hover:text-primary" data-mode="center" type="button">
+<span class="material-symbols-outlined text-[18px]">local_hospital</span>
+<span>Visit Diagnostic Center</span>
+</button>
+</div>
+</div>
+<!-- Smart Search & Quick Filters -->
+<section class="px-margin pt-space-xs flex flex-col gap-space-sm">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full pl-11 pr-10 py-3 rounded-full bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-[0_2px_12px_rgba(0,99,136,0.05)] placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search 1,200+ tests (CBC, Lipid, HbA1c, Vitamin D)..." type="text"/>
+<button aria-label="Voice Search" class="absolute right-3 w-8 h-8 flex items-center justify-center rounded-full text-primary hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+</div>
+<!-- Filter Chips Carousel -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+<span>All Packages</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-tertiary">water_drop</span>
+<span>Fasting Required</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span>6-Hr Reports</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Top NABL Labs</span>
+</button>
+</div>
+</section>
+<!-- Rx Prescription Auto-Upload Card -->
+<section class="px-margin pt-space-lg">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-tertiary-fixed via-surface-container-lowest to-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-container/20 text-tertiary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">document_scanner</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Have a Doctor's Prescription?</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              Snap a photo. Our AI pharmacist extracts and auto-adds your prescribed tests in under 1 minute.
+            </p>
+</div>
+</div>
+<button class="flex-shrink-0 px-3.5 py-2 rounded-full bg-tertiary text-on-tertiary font-label-md text-label-md flex items-center gap-1.5 shadow-md shadow-tertiary/20 active:scale-95 transition-all hover:bg-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">add_a_photo</span>
+<span>Upload</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Popular Lab Tests Carousel/Stack -->
+<section class="px-margin pt-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recommended Diagnostics</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Carefully curated routine and vital checkups</p>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-0.5">
+<span>View all</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Test Card 1: CBC -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(13,138,188,0.06)] flex flex-col gap-space-md transition-transform hover:-translate-y-0.5">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">hematology</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Complete Blood Count (CBC)</h4>
+<span class="material-symbols-outlined text-secondary text-[18px]" title="Accredited Test">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Includes 24 vital parameters • Hemoglobin, WBC, Platelets</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">₹299</div>
+<div class="font-label-sm text-label-sm text-outline line-through">₹699</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold">58% OFF</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 py-2 px-3 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-primary text-[15px]">electric_moped</span>
+<span>Free Pickup</span>
+</div>
+<div class="flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-secondary text-[15px]">timer</span>
+<span>Reports in 6 hrs</span>
+</div>
+<div class="flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-outline text-[15px]">no_meals</span>
+<span>No Fasting</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[#f59e0b] text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(18.4k booked)</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-md shadow-primary/20 active:scale-95 transition-all hover:bg-primary-container">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add Test</span>
+</button>
+</div>
+</div>
+<!-- Test Card 2: Full Body Checkup (Featured Best Value) -->
+<div class="relative overflow-hidden p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_6px_24px_-4px_rgba(0,99,136,0.12)] flex flex-col gap-space-md ring-2 ring-primary/10">
+<div class="absolute top-0 right-0">
+<span class="inline-block px-3 py-1 rounded-bl-2xl bg-gradient-to-r from-secondary to-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+          Best Value
+        </span>
+</div>
+<div class="flex items-start justify-between gap-space-sm pr-16">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">vital_signs</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Full Body Health Checkup</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">84 Tests • Liver, Kidney, Lipid, Sugar &amp; Thyroid</p>
+</div>
+</div>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-primary">₹999</span>
+<span class="font-body-md text-body-md text-outline line-through">₹2,499</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">Save 60%</span>
+</div>
+<!-- Feature Badges -->
+<div class="flex flex-wrap gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high">
+<span class="material-symbols-outlined text-tertiary text-[14px]">water_drop</span>
+          10-12 hrs Fasting Req.
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high">
+<span class="material-symbols-outlined text-primary text-[14px]">person_check</span>
+          Free Doctor Review
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high">
+<span class="material-symbols-outlined text-secondary text-[14px]">home_pin</span>
+          NABL Certified Home Visit
+        </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center -space-x-1.5">
+<img class="w-6 h-6 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Close up portrait photo of a cheerful Indian patient smiling after health checkup, soft warm natural morning clinic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiEiTX-WMUvKmjQLgTq6s6mp1SFSsQZ8WFc3bEjo0yQdM8RLOUViUcZd_e_V-gDGvrRg-vQ8y5Kbn1_0mjj1hLJWqnVZSb6P8AtC1iefwWmouofuNlnoA3x6gi_uwsRvtp8pnh8lt3tR7ZlkcrB3_K8gxEEzJcAxRx9OJ3zUENlzlzFvrCir_BpYrKflsQonrXkSquNd-nzDx4FJhUDEYxPPYr0DL5_6qxhcoT39oVuBTU3tSa2mnh_w"/>
+<img class="w-6 h-6 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Portrait photo of middle aged woman patient with glasses, friendly expression, clean clinical backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXCPg-t57ruIgnYemONqjuqrKDB9fkv2IGQJKiVBU28VWTMaHlD4cyaOdvfync6AAtwwP_PRRY331mYoGvt2Dk8PcXl8STOzc0_C1esoXWvFERKU6pFBACNcG7IS2_11x6GkaJ1dlBMECkB4Qx1_bE2p46Xaw1TPIadTdGh41RnkZ3ykeWYGvPmuf3D8G_ATcYe5Hk0jUq7PjznYIKd2UNMwN6Ius9nLNx0M73bl2KdQfk46os7ZLtiA"/>
+<img class="w-6 h-6 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Portrait photo of elderly Indian grandfather with warm friendly expression, medical consultation setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSy1KyuIW7MmDf0wARl_kaeNpveDaDeCpPMwGTLRCFP7PSjRilqk93rKQz2A3UIGKQvxHzNTChZvTonW1OBt_TpHlK69Ey031P7jiyqMebrQBqCUIw5NKnBkFEIJGrKVwJ_FcBOE_aSqFGs6uSFrXAjkzxgAgMAKJyuF-PMXgOYc-EYPhlBwTAnagsQc73LKJE4Ms7OagRT6WtBfg3Wm_7TQ7qqt0te94cdMGx4kIdDABpymLPXqBa-w"/>
+<span class="pl-2 font-body-sm text-body-sm text-on-surface-variant font-medium">9.2k happy patients this month</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-md shadow-primary/20 active:scale-95 transition-all hover:bg-primary-container">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Selected</span>
+</button>
+</div>
+</div>
+<!-- Test Card 3: Radiology / Scans -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(13,138,188,0.06)] flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">radiology</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Chest X-Ray / Diagnostic Imaging</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">PA View • Available at 8 partner centers in Indiranagar</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">₹1,200</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Slot in 45m</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-outline text-[16px]">distance</span>
+<span>Nearest: 0.8 km (Apollo Diagnostics)</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md flex items-center gap-1.5 transition-all active:scale-95">
+<span>Book Center</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Lab Comparison Engine Section -->
+<section class="px-margin pt-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Compare Accredited Labs</h3>
+<span class="material-symbols-outlined text-primary text-[18px]">balance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live transparent fees for Full Body Checkup</p>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-primary font-bold">3 Partners</span>
+</div>
+<!-- Comparison Item 1: HealthPlus -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm" data-alt="High tech modern medical laboratory interior with professional clean diagnostic centrifuge and digital sample analysis equipment, serene light blue teal tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdyXJuY45qhi1-amoaR9qe-3T4hFR34JSpnN7ytTUt3xqIHyz3Yg0MHHFTV-LqskkYHusBBYZ_DaIzx5eV0rcnkWJGyLf7ikX8nZT17sXomwj_l0MQ1h7MkYAvYuoebT4TAblb_KySTVXHRY5AgjdxQsL6fIN1GDMSh3xqv24orHqmwyhP8Gi23B55ZglTN0SDkqzVbb7DaVEFT5qdnJRQfxrcsNr3bHECinplyD3cZO__3u9cBWoBMw"/>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-label-lg text-label-lg text-on-surface">HealthPlus Diagnostic Labs</h4>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-on-surface font-bold">
+<span class="material-symbols-outlined text-[#f59e0b] text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.9
+              </span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1.5 km away</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Slot: 8:00 AM</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">₹699</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Lowest Price</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">home_health</span>
+<span>Free technician home visit included</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-all">
+          Book Home Visit
+        </button>
+</div>
+</div>
+<!-- Comparison Item 2: Apollo -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm" data-alt="Well lit corporate Apollo medical healthcare diagnostic clinic reception counter with friendly staff in professional uniforms, clean modern aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA091uI0Gw3baT2ilgS4NOklAdHCdz9m2x0qAjVMt2NXQJ-nhbRqRq7xdl9ZQt7WSJgJc0VjIrbYCMumkyI_nJ2ITapgeygxhxKPy2tCUO-Js052yZVWhSvbFkz3w5Yy_ms1ty2-VRTqpZKq5gC8nmGpxcbJIPm0PbY0T2x-B_9arvkhNdcT4ni3vVg-D2rAmy-Q8iO76naKS5HHkTpyvththMkqz-T8QPgzOY4ZLZWMy_6tTu0cYP6MQ"/>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-label-lg text-label-lg text-on-surface">Apollo Diagnostics</h4>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-on-surface font-bold">
+<span class="material-symbols-outlined text-[#f59e0b] text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.8
+              </span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2.0 km away</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Slot: 8:30 AM</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">₹750</div>
+<span class="font-body-sm text-body-sm text-outline">Standard Rate</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">bolt</span>
+<span>Instant digital reports via WhatsApp</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md transition-all active:scale-95">
+          Book Home Visit
+        </button>
+</div>
+</div>
+<!-- Comparison Item 3: Suburban Diagnostics -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm" data-alt="Microbiology laboratory scientist examining blood tubes under sterilized clean room environment, pristine glassware, deep teal and clean white accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKlSSwKAyZA0dYJidN6Lx0evgDJ5cNgiDbJdcAQjBut1DaqH_xsaLdlTPslo4iLYO0hWDiHx22F25EuE4jK9i6k0PLMwLP4GUxcHEBb2vaKnp71Uy2ndL63XxuagDsBNb2hktLcrwQscgLhklu9tsyPpTReUrsM87V4bmGnPs0iScwWU4KaLiFk9RjXGkFlrdbrJ5-3N9ty3LyQm7BdPPCaT9YwtztO0BIxlnjR1qAqPu8RjOCzSLOjA"/>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-label-lg text-label-lg text-on-surface">Suburban Diagnostics</h4>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-on-surface font-bold">
+<span class="material-symbols-outlined text-[#f59e0b] text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.7
+              </span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3.1 km away</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Slot: 9:00 AM</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">₹650</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Offer Rate</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">schedule</span>
+<span>Reports delivered in 8 hours</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md transition-all active:scale-95">
+          Book Home Visit
+        </button>
+</div>
+</div>
+</section>
+<!-- Interactive Patient Pre-Test Instructions (Accordion Delight) -->
+<section class="px-margin pt-space-xl">
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">info</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Patient Preparation Tips</h4>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Fast &amp; Accurate</span>
+</div>
+<div class="space-y-2 mt-1">
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-start gap-3 shadow-xs">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">restaurant</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface">Fasting Guidelines (10-12 Hours)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Avoid food, milk, tea or coffee after 10:00 PM for morning blood sugar and lipid profile fidelity.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-start gap-3 shadow-xs">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">water_full</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface">Stay Hydrated</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Plain drinking water is strongly encouraged to ease vein location and quick sample withdrawal.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-start gap-3 shadow-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">medication</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface">Morning Routine Medication</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Take blood pressure or thyroid tablets only after sample extraction, or as guided by your physician.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Delight Micro-Interaction: Certified Phlebotomist Assurance -->
+<section class="px-margin pt-space-xl pb-space-2xl">
+<div class="p-space-md rounded-2xl bg-surface-container-highest/60 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">vaccines</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Vaccinated Phlebotomists Only</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Single-use sealed vacutainer needles opened in front of you.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+</div>
+</section>
+<!-- Sticky Bottom Cart Checkout Summary Bar (Level 2 Elevation) -->
+<div class="sticky bottom-16 z-40 px-margin pb-space-sm pt-space-xs bg-gradient-to-t from-surface via-surface/95 to-transparent">
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-[0_10px_25px_-4px_rgba(13,138,188,0.18),0_4px_10px_-2px_rgba(15,23,42,0.06)] flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-baseline gap-1.5 truncate">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">₹999</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹2,499</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary font-semibold truncate">Full Body Package • Free Pickup</p>
+</div>
+</div>
+<button class="flex-shrink-0 px-5 py-3 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg flex items-center gap-2 shadow-lg shadow-primary/25 active:scale-95 transition-all hover:opacity-95" type="button">
+<span>Select Slot</span>
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive toggle between Home Sample Pickup and Walk-in Diagnostic Centers
+  (function() {
+    const toggleContainer = document.getElementById('pickup-mode-toggle');
+    if (!toggleContainer) return;
+
+    const buttons = toggleContainer.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => {
+          b.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,99,136,0.06)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-between h-16 px-space-xs max-w-md mx-auto"><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="home" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">home</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Home</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="doctors-&amp;-clinics" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">stethoscope</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Doctors</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] transition-all group text-primary font-bold" data-path="diagnostics-&amp;-labs" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">chips</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Labs</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="pharmacy-&amp;-equipment" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">medication</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Pharmacy</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="home-&amp;-elder-care" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">elderly</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Elder Care</span></a></div></nav></body></html>

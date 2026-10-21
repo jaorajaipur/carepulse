@@ -1,0 +1,6 @@
+{
+  "name": "CarePulse - Unified Healthcare Aggregator",
+  "description": "Complete healthcare aggregator Android app featuring Doctors & OPD booking, Diagnostics & NABL lab tests with live phlebotomist tracking, 15-min Pharmacy delivery with clinical pharmacist review, Home Nursing & Elder Care, and Live Emergency Blood Bank donor finder.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

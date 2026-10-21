@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Default safety deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Medicines catalog: Anyone can read, write allowed with schema validation
+    match /medicines/{medicineId} {
+      allow read: if true;
+      allow create, update: if isValidId(medicineId) &&
+        incoming().name is string && incoming().name.size() > 0 && incoming().name.size() <= 200 &&
+        incoming().price is number && incoming().price >= 0;
+      allow delete: if isValidId(medicineId);
+    }
+
+    // Diagnostic packages: Anyone can read, write allowed with schema validation
+    match /diagnosticPackages/{packageId} {
+      allow read: if true;
+      allow create, update: if isValidId(packageId) &&
+        incoming().title is string && incoming().title.size() > 0 && incoming().title.size() <= 200 &&
+        incoming().price is number && incoming().price >= 0;
+      allow delete: if isValidId(packageId);
+    }
+
+    // Doctors: Anyone can read, write allowed with schema validation
+    match /doctors/{doctorId} {
+      allow read: if true;
+      allow create, update: if isValidId(doctorId) &&
+        incoming().name is string && incoming().name.size() > 0 && incoming().name.size() <= 150 &&
+        incoming().consultationFee is number && incoming().consultationFee >= 0;
+      allow delete: if isValidId(doctorId);
+    }
+  }
+}

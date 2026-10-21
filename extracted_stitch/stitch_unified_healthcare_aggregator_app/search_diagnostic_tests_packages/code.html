@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#80d0ff", "surface-container": "#e5eeff", "on-error": "#ffffff", "background": "#f8f9ff", "on-primary-fixed": "#001e2d", "on-tertiary": "#ffffff", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "on-primary-fixed-variant": "#004c6a", "inverse-primary": "#80d0ff", "surface-variant": "#d3e4fe", "primary": "#006388", "surface-container-low": "#eff4ff", "tertiary-fixed": "#ffdad3", "surface": "#f8f9ff", "on-tertiary-fixed-variant": "#87200b", "outline": "#6f7880", "secondary-fixed": "#6ffbbe", "outline-variant": "#bec8d0", "on-surface": "#0b1c30", "secondary": "#006c49", "primary-container": "#007dab", "surface-container-high": "#dce9ff", "surface-dim": "#cbdbf5", "tertiary-fixed-dim": "#ffb4a4", "on-surface-variant": "#3f484f", "on-primary-container": "#fcfcff", "inverse-surface": "#213145", "on-secondary-fixed": "#002113", "on-primary": "#ffffff", "primary-fixed": "#c5e7ff", "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "tertiary": "#a5361e", "tertiary-container": "#c64d34", "surface-tint": "#00658c", "on-secondary-fixed-variant": "#005236", "error": "#ba1a1a", "on-tertiary-fixed": "#3e0500", "on-tertiary-container": "#fffbff", "on-background": "#0b1c30", "secondary-container": "#6cf8bb", "secondary-fixed-dim": "#4edea3", "inverse-on-surface": "#eaf1ff", "on-secondary-container": "#00714d", "on-error-container": "#93000a" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter": "1rem", "margin-md": "1.25rem", "space-2xl": "2rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "gutter-sm": "0.75rem" }, "fontFamily": { "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;-webkit-tap-highlight-color:transparent;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="CarePulse Health Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALHDIaBK_Q84tpsZWsg2t_Jf3_hrixdPuPUikzoYPlSctUW5Tyc3gMg5X8R7NuyGAfpsuWFyhseGM1GVyhyGOPdGElP5NhWZXFw_RthHyy4yKv81irynDZ9FyaqYzKTtvpdvQQdEyOhuJtpS6K5e93zsAM6GuTzPbJQ6clMpy0Ky1aQiYuIT46IUkqvq42UBeWWPPg_VGvGDROelSWGWDZ8Vu5pdOPuuAvVbq9L8Ia_rTdo-IX31nPzg"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">CarePulse</span><span class="text-xs text-on-surface-variant font-medium">•</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Diagnostics &amp; Labs</span></div><button class="flex items-center gap-0.5 text-left group min-w-0"><span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0">location_on</span><span class="font-label-lg text-label-lg text-on-surface truncate group-hover:text-primary transition-colors">Indiranagar, Bengaluru</span><span class="material-symbols-outlined text-outline text-[16px] flex-shrink-0">expand_more</span></button></div></div><div class="flex items-center gap-1 flex-shrink-0"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all active:scale-95"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all active:scale-95"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span></button><button aria-label="Profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 active:scale-95 transition-all ml-0.5"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI-joKq4K0E_YOGMvZzI0j_bu-4rLwXn-m5IBMDp4BKazZK469AYbECdLIzzbmcErGWRYIkt5ERQThSsl9gTQsKvhwjd0nyoTi3MmEpBdhpyxbOKV2J0HUHBJXdpa1tm2u2Q_foI7f4kqH52AYwPqBjWHXTsxG2gwmJ-M1nenVoD59Mh1PJuFRpdKaJYdb66wMKBz9-XKuH7pPORtyu3aKz4Awf9FzMNX5xkDbXf9on6EB62QQtBD9MQ"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-32">
+<!-- Search & Search State Area -->
+<section class="flex flex-col px-margin pt-space-md gap-space-md">
+<!-- Active Search Bar -->
+<div class="relative flex items-center w-full bg-surface-container-lowest rounded-full shadow-md px-space-md py-1.5 transition-all focus-within:ring-2 focus-within:ring-primary/20">
+<span class="material-symbols-outlined text-primary text-[22px] flex-shrink-0 mr-2">search</span>
+<input class="w-full bg-transparent font-body-md text-on-surface focus:outline-none placeholder:text-outline" id="searchInput" placeholder="Search tests, organs, symptoms..." type="text" value="Full Body Checkup"/>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button aria-label="Clear Search" class="w-7 h-7 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95 transition-all" id="clearSearchBtn">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+<button aria-label="Voice Search" class="w-8 h-8 flex items-center justify-center rounded-full text-primary hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+</div>
+</div>
+<!-- Location Indicator & Query Stats Pill -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]">near_me</span>
+<span class="truncate max-w-[130px]">Indiranagar, BLR</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Slots from 7:00 AM Today</span>
+</div>
+<span class="font-label-md text-label-md text-secondary flex items-center gap-0.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+        60m Pickup
+      </span>
+</div>
+<!-- Recent Queries / Search Suggestions Chips -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">history</span>
+        Full Body Checkup
+      </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-all">
+        CBC (Complete Blood Count)
+      </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-all">
+        Thyroid Profile (T3, T4, TSH)
+      </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-all">
+        HbA1c Diabetes
+      </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-all">
+        Lipid Profile
+      </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-all">
+        Vitamin D3 &amp; B12
+      </button>
+</div>
+</section>
+<!-- Filter & Sort Facet Bar -->
+<section class="flex items-center gap-2 px-margin pt-space-md overflow-x-auto no-scrollbar">
+<!-- Filter Dialog Trigger -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md flex-shrink-0 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Filters</span>
+<span class="w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center">2</span>
+</button>
+<!-- Active Filters -->
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex-shrink-0 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">check</span>
+      Home Pickup
+    </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex-shrink-0 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">sort</span>
+      Price: Low to High
+    </button>
+<!-- Inactive Filter Chips -->
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md flex-shrink-0 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+      NABL Accredited Only
+    </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md flex-shrink-0 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+      Report &lt; 6h
+    </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md flex-shrink-0 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">no_food</span>
+      Fasting Required
+    </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md flex-shrink-0 shadow-sm active:scale-95 transition-all">
+      Packages (80+ Tests)
+    </button>
+</section>
+<!-- Segmented Tab Switcher -->
+<section class="px-margin pt-space-lg">
+<div class="flex items-center p-1 rounded-full bg-surface-container-low shadow-sm">
+<button class="flex-1 py-2 px-2 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all text-center truncate">
+        Packages (14)
+      </button>
+<button class="flex-1 py-2 px-2 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center truncate">
+        Tests (48)
+      </button>
+<button class="flex-1 py-2 px-2 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center truncate">
+        By Organ / Need
+      </button>
+</div>
+</section>
+<!-- Prescription Upload Triage Banner -->
+<section class="px-margin pt-space-lg">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high p-space-md shadow-sm">
+<div class="flex items-start gap-space-md relative z-10">
+<div class="w-12 h-12 rounded-2xl bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[26px]">document_scanner</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Can't find your test?</span>
+<span class="px-1.5 py-0.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm uppercase">5 Min Match</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+            Upload your doctor's prescription. Our certified clinical pathologist will map the exact tests and best lab prices for you.
+          </p>
+<div class="mt-space-sm flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+              Upload Prescription
+            </button>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">lock</span>
+              100% Private &amp; Secure
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Search Results Listing -->
+<section class="flex flex-col px-margin pt-space-lg gap-space-lg">
+<!-- Header results count -->
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Showing Diagnostic Packages</h2>
+<span class="font-label-md text-label-md text-primary bg-primary-fixed px-2.5 py-0.5 rounded-full">14 Verified</span>
+</div>
+<!-- CARD 1: PLATINUM FULL BODY CHECKUP (PROMOTED / BEST VALUE) -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-lg shadow-md relative overflow-hidden transition-all">
+<!-- Top Accent Bar -->
+<div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-primary via-primary-container to-secondary"></div>
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-sm pt-1">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm uppercase tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+              Best Value
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+              89 Parameters
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+              NABL Certified
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">CarePulse Platinum Full Body Checkup</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Comprehensive organ profiling for complete health monitoring.</p>
+</div>
+<button aria-label="Share package" class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-95 transition-all flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+<!-- Tests Profile Pill Matrix -->
+<div class="mt-space-md grid grid-cols-2 gap-2 bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0">bloodtype</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Complete Hemogram (24)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">vital_signs</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Liver Function LFT (12)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0">water_drop</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Kidney Function KFT (8)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] flex-shrink-0">favorite</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Lipid Profile &amp; Heart (7)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0">cognition</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Thyroid Total (3)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">wb_sunny</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Vitamin D3 &amp; B12</span>
+</div>
+</div>
+<!-- Prep & SLA Info Details -->
+<div class="mt-space-md flex flex-col gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0">no_food</span>
+<span>10-12 hrs fasting required • Free Home Sample Collection</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">schedule</span>
+<span>Digital Reports in 12 hrs via App &amp; WhatsApp</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] flex-shrink-0">support_agent</span>
+<span class="text-tertiary font-label-md text-label-md">FREE Doctor Consultation included on reports</span>
+</div>
+</div>
+<!-- Aggregated Partner Lab Comparison Selector -->
+<div class="mt-space-md flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Choose Accredited Partner Lab</span>
+<!-- Lab Option 1 (Selected) -->
+<label class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-high transition-all cursor-pointer">
+<div class="flex items-center gap-space-sm min-w-0">
+<input checked="" class="w-4 h-4 text-primary accent-primary flex-shrink-0" name="lab_choice_card1" type="radio"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">HealthPlus Labs</span>
+<span class="inline-flex items-center text-[11px] font-bold text-amber-600">
+<span class="material-symbols-outlined text-[13px] text-amber-500 mr-0.5" style="font-variation-settings: 'FILL' 1;">star</span>
+                  4.9
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Slot: Today 8:00 AM • NABL/CAP</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary">₹999</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹2,499</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">60% OFF</span>
+</div>
+</label>
+<!-- Lab Option 2 -->
+<label class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex items-center gap-space-sm min-w-0">
+<input class="w-4 h-4 text-primary accent-primary flex-shrink-0" name="lab_choice_card1" type="radio"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Apollo Diagnostics</span>
+<span class="inline-flex items-center text-[11px] font-bold text-amber-600">
+<span class="material-symbols-outlined text-[13px] text-amber-500 mr-0.5" style="font-variation-settings: 'FILL' 1;">star</span>
+                  4.8
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Slot: Today 8:30 AM • NABL</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹1,199</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹2,600</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">54% OFF</span>
+</div>
+</label>
+<!-- Lab Option 3 -->
+<label class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex items-center gap-space-sm min-w-0">
+<input class="w-4 h-4 text-primary accent-primary flex-shrink-0" name="lab_choice_card1" type="radio"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Suburban Diagnostics</span>
+<span class="inline-flex items-center text-[11px] font-bold text-amber-600">
+<span class="material-symbols-outlined text-[13px] text-amber-500 mr-0.5" style="font-variation-settings: 'FILL' 1;">star</span>
+                  4.7
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Slot: Today 9:00 AM • NABL</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹1,050</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹2,200</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">52% OFF</span>
+</div>
+</label>
+</div>
+<!-- Bottom Card Action CTA -->
+<div class="mt-space-lg flex items-center justify-between pt-space-md bg-surface-container-lowest">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Selected Total</span>
+<span class="font-headline-lg text-headline-lg text-primary leading-tight">₹999</span>
+</div>
+<button class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:shadow-lg active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+          Add Package
+        </button>
+</div>
+</div>
+<!-- CARD 2: ADVANCED DIABETES CARE & CARDIAC EVALUATION -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-lg shadow-md transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm uppercase tracking-wide">
+              Chronic Care
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+              42 Parameters
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Advanced Diabetes &amp; Cardiac Care</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Comprehensive glucose, HbA1c, and cardiovascular risk screening.</p>
+</div>
+</div>
+<!-- Test list pill highlights -->
+<div class="mt-space-md flex flex-wrap gap-1.5">
+<span class="px-2 py-1 rounded-md bg-surface-container-low font-body-sm text-body-sm text-on-surface">HbA1c Glycated Hemoglobin</span>
+<span class="px-2 py-1 rounded-md bg-surface-container-low font-body-sm text-body-sm text-on-surface">Fasting Blood Sugar</span>
+<span class="px-2 py-1 rounded-md bg-surface-container-low font-body-sm text-body-sm text-on-surface">Lipid Profile Extended</span>
+<span class="px-2 py-1 rounded-md bg-surface-container-low font-body-sm text-body-sm text-on-surface">Serum Creatinine</span>
+<span class="px-2 py-1 rounded-md bg-surface-container-low font-body-sm text-body-sm text-on-surface">Microalbumin</span>
+</div>
+<!-- Logistics Details -->
+<div class="mt-space-md grid grid-cols-2 gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">water_bottle</span>
+<span>Blood &amp; Urine Sample</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">moped</span>
+<span>Pickup in 45 mins</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span>By Apollo Diagnostics</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">timer</span>
+<span>Reports in 6 Hours</span>
+</div>
+</div>
+<!-- Card Pricing and Action Button -->
+<div class="mt-space-lg flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg text-on-surface">₹649</span>
+<span class="font-body-md text-body-md text-outline line-through">₹1,400</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">53% OFF</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Includes sample pickup charges</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+          Add to Cart
+        </button>
+</div>
+</div>
+<!-- CARD 3: INDIVIDUAL TEST - THYROID TOTAL PROFILE -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-lg shadow-md transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wide">
+              Essential Single Test
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+              3 Parameters
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Thyroid Total Profile (T3, T4, TSH Ultra)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Assesses metabolic health, hypo/hyperthyroidism with ultra-sensitive assay.</p>
+</div>
+</div>
+<!-- Key Badge Matrix -->
+<div class="mt-space-md flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+          No Fasting Required
+        </span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">home_pin</span>
+          Free Doorstep Collection
+        </span>
+</div>
+<!-- Aggregated Lab Price Pill Dropdown / Selector -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0">compare_arrows</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Compare 4 Verified Labs</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">HealthPlus (₹249) • Lal PathLabs (₹299) • Apollo (₹320)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] flex-shrink-0">unfold_more</span>
+</div>
+<!-- Card Bottom Row -->
+<div class="mt-space-md flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Starts from</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">₹249</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹550</span>
+</div>
+</div>
+<button class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+          Add Test
+        </button>
+</div>
+</div>
+<!-- Assurance & Safety Micro-Trust Banner -->
+<div class="rounded-2xl bg-surface-container-low p-space-md flex items-center justify-around gap-2 text-center">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm mb-1">
+<span class="material-symbols-outlined text-[20px]">sanitizer</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">100% Sterile</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Single-use Kits</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm mb-1">
+<span class="material-symbols-outlined text-[20px]">ac_unit</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Cold Chain</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Temp Monitored</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm mb-1">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">NABL / CAP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dual Verification</span>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Cart Summary Floating Bar -->
+<div class="fixed bottom-16 inset-x-0 z-40 px-margin pb-2 pointer-events-none">
+<div class="pointer-events-auto max-w-md mx-auto rounded-2xl bg-on-surface/95 backdrop-blur-xl text-on-primary p-space-md shadow-2xl flex items-center justify-between gap-space-sm border-0 transition-transform">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative w-11 h-11 rounded-xl bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-surface truncate">1 Package Added</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface/20 text-surface">₹999</span>
+</div>
+<span class="font-body-sm text-body-sm text-surface-container truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">check_circle</span>
+            Free Home Sample Pickup
+          </span>
+</div>
+</div>
+<button class="inline-flex items-center gap-1 px-4 py-2.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-bold flex-shrink-0 active:scale-95 transition-all shadow-md">
+<span>View Cart</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Interactive clearing and search trigger behavior
+  const clearBtn = document.getElementById('clearSearchBtn');
+  const searchInput = document.getElementById('searchInput');
+
+  if (clearBtn && searchInput) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchInput.focus();
+    });
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,99,136,0.06)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-between h-16 px-space-xs max-w-md mx-auto"><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="home" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">home</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Home</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="doctors-&amp;-clinics" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">stethoscope</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Doctors</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="diagnostics-&amp;-labs" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">chips</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Labs</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="pharmacy-&amp;-equipment" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">medication</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Pharmacy</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-all group" data-path="home-&amp;-elder-care" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">elderly</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight truncate max-w-[64px]">Elder Care</span></a></div></nav></body></html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#bec8d0", "on-tertiary-fixed-variant": "#87200b", "surface-variant": "#d3e4fe", "error-container": "#ffdad6", "error": "#ba1a1a", "on-primary-container": "#fcfcff", "on-background": "#0b1c30", "secondary-fixed-dim": "#4edea3", "primary": "#006388", "on-surface": "#0b1c30", "surface-tint": "#00658c", "on-primary-fixed": "#001e2d", "surface-container-lowest": "#ffffff", "surface-container-highest": "#d3e4fe", "secondary-fixed": "#6ffbbe", "surface-container": "#e5eeff", "surface-bright": "#f8f9ff", "surface-container-high": "#dce9ff", "background": "#f8f9ff", "on-tertiary-container": "#fffbff", "on-error": "#ffffff", "on-primary-fixed-variant": "#004c6a", "inverse-on-surface": "#eaf1ff", "tertiary-fixed": "#ffdad3", "on-primary": "#ffffff", "surface": "#f8f9ff", "tertiary": "#a5361e", "secondary": "#006c49", "on-tertiary-fixed": "#3e0500", "tertiary-container": "#c64d34", "on-secondary-container": "#00714d", "on-secondary-fixed": "#002113", "on-surface-variant": "#3f484f", "on-error-container": "#93000a", "on-secondary": "#ffffff", "inverse-primary": "#80d0ff", "inverse-surface": "#213145", "on-secondary-fixed-variant": "#005236", "outline": "#6f7880", "primary-fixed-dim": "#80d0ff", "primary-container": "#007dab", "tertiary-fixed-dim": "#ffb4a4", "on-tertiary": "#ffffff", "surface-container-low": "#eff4ff", "surface-dim": "#cbdbf5", "secondary-container": "#6cf8bb", "primary-fixed": "#c5e7ff" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-2xl": "2rem", "margin": "1rem", "space-xl": "1.5rem", "space-xs": "0.25rem", "margin-md": "1.25rem", "gutter-sm": "0.75rem", "space-lg": "1rem", "gutter": "1rem", "space-md": "0.75rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Go back" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Track Sample Collection</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Emergency Help or Support" class="w-11 h-11 rounded-full flex items-center justify-center text-tertiary bg-tertiary-fixed hover:bg-tertiary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[20px]">support_agent</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-10 px-margin space-y-space-lg">
+<!-- Top Navigation & Context Subtitle -->
+<div class="flex flex-col pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<button aria-label="Back to tracking" class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors shadow-sm" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<div class="min-w-0">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Delivery &amp; Entry Instructions</h2>
+<p class="font-label-md text-label-md text-primary flex items-center gap-1 font-semibold truncate">
+<span class="material-symbols-outlined text-[15px] inline">medical_services</span>
+            Phlebotomist: Ramesh Kumar
+          </p>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide">
+        #CP-LAB-94829
+      </span>
+</div>
+</div>
+<!-- Live ETA Context Card -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-[0_4px_20px_-2px_rgba(13,138,188,0.05)] relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary-fixed/30 pointer-events-none blur-xl"></div>
+<div class="flex items-start justify-between gap-space-sm relative z-10">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0 mt-0.5">
+<div class="w-11 h-11 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">two_wheeler</span>
+</div>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-secondary rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Arriving in ~14 mins</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-label-md text-secondary font-bold">8:25 AM ETA</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">
+            Flat 402, Green Glen Apts, 12th Main Road, Indiranagar
+          </p>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between gap-space-sm flex-wrap">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Full Body Health Package • Fasting Confirmed</span>
+</div>
+<div class="flex items-center gap-1 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] animate-pulse">radar</span>
+<span>Live link active</span>
+</div>
+</div>
+</div>
+<!-- Instruction Form Body -->
+<form class="space-y-space-lg" id="instructionsForm" onsubmit="event.preventDefault(); handleSaveInstructions();">
+<!-- Section 1: Gate & Entry Instructions -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-[0_4px_20px_-2px_rgba(13,138,188,0.05)] space-y-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">door_front</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Gate &amp; Entry Instructions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Help Ramesh navigate your community gate and reach your doorstep without delay.</p>
+</div>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="gateNotes">Specific Directions for Ramesh</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="charCounter">142 / 300</span>
+</div>
+<div class="relative">
+<textarea class="w-full rounded-DEFAULT bg-surface-container-low text-on-surface p-space-md font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all resize-none" id="gateNotes" maxlength="300" placeholder="Add specific gate details, elevator directions, passcode or parking notes..." rows="4">Gate 2 is closed after 8 AM. Please enter via Gate 1 near Apollo Pharmacy. Tell the guard you are visiting Flat 402. Elevator B leads straight to the 4th floor.</textarea>
+</div>
+</div>
+<!-- Quick Add Chips -->
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-xs">One-Tap Quick Additions</p>
+<div class="flex flex-wrap gap-1.5" id="chipsContainer">
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors active:scale-95" onclick="appendInstruction('+ Ring Doorbell')" type="button">
+            + Ring Doorbell
+          </button>
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors active:scale-95" onclick="appendInstruction('+ Do not ring bell (Baby sleeping)')" type="button">
+            + Baby sleeping (Knock softly)
+          </button>
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors active:scale-95" onclick="appendInstruction('+ Leave shoes outside')" type="button">
+            + Leave shoes outside
+          </button>
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors active:scale-95" onclick="appendInstruction('+ Guard entry required (Pre-approved on MyGate)')" type="button">
+            + Pre-approved on MyGate
+          </button>
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors active:scale-95" onclick="appendInstruction('+ Service lift operational')" type="button">
+            + Elevator working
+          </button>
+</div>
+</div>
+</div>
+<!-- Section 2: Call on Arrival Preference -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-[0_4px_20px_-2px_rgba(13,138,188,0.05)] space-y-space-md">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Call on Arrival</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Phlebotomist calls prior to ringing intercom or door bell.</p>
+</div>
+</div>
+<!-- Accessible Custom Toggle -->
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="callToggle" onchange="toggleCallStatus()" type="checkbox"/>
+<div class="w-12 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">contact_phone</span>
+<span class="font-label-lg text-label-lg truncate">Will call <strong class="font-bold">+91 98765 43210</strong> (Arjun)</span>
+</div>
+<button class="px-space-sm py-1 rounded-full text-primary hover:bg-surface-container font-label-md text-label-md transition-colors shrink-0" onclick="editPhoneNumber()" type="button">
+          Edit
+        </button>
+</div>
+</div>
+<!-- Section 3: Photo of Building Entrance / Gate -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-[0_4px_20px_-2px_rgba(13,138,188,0.05)] space-y-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Building Entrance &amp; Landmark Photo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Upload a visual landmark or gate view so Ramesh spots your exact location instantly.</p>
+</div>
+</div>
+<!-- Uploaded Gate Preview -->
+<div class="relative rounded-DEFAULT overflow-hidden bg-surface-container-low shadow-sm" id="photoPreviewContainer">
+<div class="w-full h-44 bg-cover bg-center" data-alt="A brightly lit modern residential apartment gate in Bangalore with a clear security boom barrier and prominent signage saying Gate 1 near lush tropical garden plants" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALg_mrgTYDjM4bqfST0uv90z0CTjEek_gc7vOZf6VZXniI7gYwpZqSCBbw7p9olECGxMzgLQ4JNJVwCGdFm9Sl0d-cSnvUTQTN2HnPbBAbF4lmhwt2k1CknQZ_jQ9e1sNTjDV6uoX3vaVjresvjvzPQJeYPQQvQY8RCp8uCU7RafJ4Q_DnCCbSbVGgTPcanjPtqrPZO2zordb6wXHV1Pu4NYyTKexHnZS6MpNpEAA0TX9UkILWmNNz1Q')">
+</div>
+<div class="p-space-sm bg-surface-container-lowest/95 backdrop-blur-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Exterior Gate 1 - Apollo side</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">gate_entrance_402.jpg • 2.4 MB</p>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-space-sm py-1 rounded-full text-primary hover:bg-surface-container font-label-md text-label-md" onclick="simulateReplacePhoto()" type="button">
+              Replace
+            </button>
+<button class="w-7 h-7 rounded-full flex items-center justify-center text-error hover:bg-error-container/50" onclick="simulateRemovePhoto()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Action Trigger Buttons for Camera / Gallery -->
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="flex items-center justify-center gap-2 py-2.5 px-space-sm rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-colors" onclick="simulateUploadAction('camera')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">photo_camera</span>
+<span>Take Live Photo</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-space-sm rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-colors" onclick="simulateUploadAction('gallery')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">upload_file</span>
+<span>From Gallery</span>
+</button>
+</div>
+</div>
+<!-- Section 4: Doorstep Collection Preferences -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-[0_4px_20px_-2px_rgba(13,138,188,0.05)] space-y-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Doorstep Collection Preferences</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Complimentary CarePulse safe-handling standards.</p>
+</div>
+</div>
+<div class="space-y-space-sm">
+<!-- Option 1 -->
+<label class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0 pr-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">sanitizer</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Sanitization Protocol</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Request fresh hand sanitization &amp; new glove seal unpack before entering</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-secondary rounded cursor-pointer shrink-0" type="checkbox"/>
+</label>
+<!-- Option 2 -->
+<label class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0 pr-2">
+<span class="material-symbols-outlined text-[20px] text-primary">badge</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Digital ID &amp; Vaccine Badge</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Show CarePulse certified technician badge upon entry</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-secondary rounded cursor-pointer shrink-0" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Live Toast / Status Notification -->
+<div class="hidden rounded-DEFAULT p-space-md bg-secondary text-on-secondary shadow-lg items-center gap-space-sm transition-all duration-300" id="toastMessage">
+<span class="material-symbols-outlined text-[20px]">cloud_done</span>
+<p class="font-label-lg text-label-lg font-medium flex-1">Instructions synced to Ramesh's navigation unit!</p>
+</div>
+<!-- Actions Footer -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Main Action (Secondary-Themed Reassurance Button) -->
+<button class="w-full h-12 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-[0_8px_20px_-4px_rgba(0,108,73,0.3)] hover:opacity-95 active:scale-[0.99] transition-all" id="saveButton" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Save &amp; Send Instructions to Ramesh</span>
+</button>
+<!-- Discard / Reset Action Button -->
+<button class="w-full h-11 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1.5 transition-colors" onclick="handleResetDefaults()" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Reset to Default Address Notes</span>
+</button>
+<!-- Microcopy Reassurance -->
+<p class="text-center font-body-sm text-body-sm text-on-surface-variant px-space-md">
+<span class="material-symbols-outlined text-[14px] align-middle text-secondary mr-0.5">lock_clock</span>
+        Instructions broadcast immediately to Ramesh's active navigation console in real time.
+      </p>
+</div>
+</form>
+</div>
+<script>
+  // Character counter for instructions textarea
+  const textarea = document.getElementById('gateNotes');
+  const counter = document.getElementById('charCounter');
+  if (textarea && counter) {
+    textarea.addEventListener('input', () => {
+      counter.textContent = `${textarea.value.length} / 300`;
+    });
+  }
+
+  // Quick chip helper
+  function appendInstruction(text) {
+    if (!textarea) return;
+    const cleanText = text.replace(/^\+\s*/, '');
+    if (textarea.value.includes(cleanText)) return;
+    if (textarea.value.trim().length > 0) {
+      textarea.value += ' ' + cleanText + '.';
+    } else {
+      textarea.value = cleanText + '.';
+    }
+    textarea.dispatchEvent(new Event('input'));
+    textarea.focus();
+  }
+
+  // Toggle call helper
+  function toggleCallStatus() {
+    const isChecked = document.getElementById('callToggle').checked;
+    console.log('Call on arrival set to:', isChecked);
+  }
+
+  function editPhoneNumber() {
+    const newNumber = prompt('Enter primary contact phone for Ramesh to call:', '+91 98765 43210');
+    if (newNumber) {
+      alert('Updated contact number to: ' + newNumber);
+    }
+  }
+
+  function simulateUploadAction(source) {
+    alert(`Opening ${source === 'camera' ? 'camera capture' : 'device gallery'} to snap building entrance...`);
+  }
+
+  function simulateReplacePhoto() {
+    alert('Select new building gate photo from your camera roll.');
+  }
+
+  function simulateRemovePhoto() {
+    const container = document.getElementById('photoPreviewContainer');
+    if (container) {
+      container.classList.add('opacity-40');
+      setTimeout(() => {
+        container.innerHTML = `
+          <div class="p-space-lg text-center bg-surface-container-low rounded-DEFAULT">
+            <span class="material-symbols-outlined text-outline text-[32px] mb-1">image_not_supported</span>
+            <p class="font-label-md text-label-md text-on-surface-variant">Gate photo removed. You can snap a new photo anytime.</p>
+          </div>
+        `;
+        container.classList.remove('opacity-40');
+      }, 200);
+    }
+  }
+
+  function handleResetDefaults() {
+    if (confirm('Reset to standard profile instructions?')) {
+      if (textarea) {
+        textarea.value = 'Gate 2 is closed after 8 AM. Please enter via Gate 1 near Apollo Pharmacy. Tell the guard you are visiting Flat 402. Elevator B leads straight to the 4th floor.';
+        textarea.dispatchEvent(new Event('input'));
+      }
+    }
+  }
+
+  function handleSaveInstructions() {
+    const saveBtn = document.getElementById('saveButton');
+    const toast = document.getElementById('toastMessage');
+    
+    if (saveBtn) {
+      saveBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span>
+        <span>Broadcasting to Ramesh...</span>
+      `;
+      saveBtn.disabled = true;
+    }
+
+    setTimeout(() => {
+      if (saveBtn) {
+        saveBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px]">check_circle</span>
+          <span>Instructions Sent!</span>
+        `;
+        saveBtn.classList.remove('bg-secondary');
+        saveBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+      }
+
+      if (toast) {
+        toast.classList.remove('hidden');
+        toast.classList.add('flex');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.classList.remove('flex');
+          if (saveBtn) {
+            saveBtn.innerHTML = `
+              <span class="material-symbols-outlined text-[20px]">send</span>
+              <span>Update Instructions</span>
+            `;
+            saveBtn.classList.add('bg-secondary', 'text-on-secondary');
+            saveBtn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+            saveBtn.disabled = false;
+          }
+        }, 3000);
+      }
+    }, 900);
+  }
+</script></main></body></html>

@@ -1,0 +1,91 @@
+{
+  "entities": {
+    "Medicine": {
+      "title": "Medicine",
+      "description": "Pharmacy medicine item",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 200 },
+        "brand": { "type": "string", "maxLength": 100 },
+        "composition": { "type": "string", "maxLength": 250 },
+        "category": { "type": "string", "maxLength": 100 },
+        "packSize": { "type": "string", "maxLength": 100 },
+        "price": { "type": "number" },
+        "originalPrice": { "type": "number" },
+        "discountPercent": { "type": "number" },
+        "requiresPrescription": { "type": "boolean" },
+        "deliveryTime": { "type": "string", "maxLength": 50 },
+        "stockStatus": { "type": "string", "enum": ["in_stock", "few_left", "out_of_stock"] },
+        "image": { "type": "string", "maxLength": 500 },
+        "dosageRecommendation": { "type": "string", "maxLength": 300 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "price", "category"]
+    },
+    "DiagnosticPackage": {
+      "title": "DiagnosticPackage",
+      "description": "Lab test and diagnostic package",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string", "maxLength": 200 },
+        "tagline": { "type": "string", "maxLength": 300 },
+        "category": { "type": "string", "maxLength": 50 },
+        "testCount": { "type": "number" },
+        "parameters": { "type": "array" },
+        "popularFor": { "type": "string", "maxLength": 200 },
+        "fastingHours": { "type": "number" },
+        "reportTimeHours": { "type": "number" },
+        "sampleType": { "type": "string", "maxLength": 100 },
+        "price": { "type": "number" },
+        "originalPrice": { "type": "number" },
+        "discountPercent": { "type": "number" },
+        "accreditedLab": { "type": "string", "maxLength": 100 },
+        "homeCollectionFree": { "type": "boolean" },
+        "tags": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "price", "category", "testCount"]
+    },
+    "Doctor": {
+      "title": "Doctor",
+      "description": "Doctor profile and consultation details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 150 },
+        "specialty": { "type": "string", "maxLength": 100 },
+        "subSpecialty": { "type": "string", "maxLength": 150 },
+        "experience": { "type": "number" },
+        "qualifications": { "type": "string", "maxLength": 200 },
+        "rating": { "type": "number" },
+        "reviewsCount": { "type": "number" },
+        "hospital": { "type": "string", "maxLength": 150 },
+        "distance": { "type": "string", "maxLength": 50 },
+        "consultationFee": { "type": "number" },
+        "nextAvailable": { "type": "string", "maxLength": 50 },
+        "avatar": { "type": "string", "maxLength": 500 },
+        "about": { "type": "string", "maxLength": 1000 },
+        "inClinic": { "type": "boolean" },
+        "videoConsult": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "specialty", "consultationFee"]
+    }
+  },
+  "firestore": {
+    "/medicines/{medicineId}": {
+      "schema": { "$ref": "#/entities/Medicine" },
+      "description": "Public catalog of medicines for pharmacy delivery"
+    },
+    "/diagnosticPackages/{packageId}": {
+      "schema": { "$ref": "#/entities/DiagnosticPackage" },
+      "description": "Diagnostic packages and lab test catalog"
+    },
+    "/doctors/{doctorId}": {
+      "schema": { "$ref": "#/entities/Doctor" },
+      "description": "Medical doctors and clinic OPD directory"
+    }
+  }
+}
