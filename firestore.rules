@@ -45,5 +45,29 @@ service cloud.firestore {
         incoming().consultationFee is number && incoming().consultationFee >= 0;
       allow delete: if isValidId(doctorId);
     }
+
+    // Home Nurses
+    match /homeNurses/{nurseId} {
+      allow read: if true;
+      allow create, update, delete: if isValidId(nurseId);
+    }
+
+    // Medical Equipment
+    match /medicalEquipment/{equipId} {
+      allow read: if true;
+      allow create, update, delete: if isValidId(equipId);
+    }
+
+    // Blood Banks
+    match /bloodBanks/{bankId} {
+      allow read: if true;
+      allow create, update, delete: if isValidId(bankId);
+    }
+
+    // Blood Donors
+    match /bloodDonors/{donorId} {
+      allow read: if true;
+      allow create, update, delete: if isValidId(donorId);
+    }
   }
 }

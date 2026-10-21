@@ -11,6 +11,8 @@ import {
   Medicine,
   HomeNurse,
   MedicalEquipment,
+  BloodBank,
+  BloodDonor,
   CartItem,
   Appointment,
   PhlebotomistInstructions
@@ -62,6 +64,10 @@ export default function App() {
   const [medicines, setMedicines] = useState<Medicine[]>(MOCK_MEDICINES);
   const [packages, setPackages] = useState<DiagnosticPackage[]>(MOCK_DIAGNOSTIC_PACKAGES);
   const [doctors, setDoctors] = useState<Doctor[]>(MOCK_DOCTORS);
+  const [nurses, setNurses] = useState<HomeNurse[]>(MOCK_HOME_NURSES);
+  const [equipment, setEquipment] = useState<MedicalEquipment[]>(MOCK_MEDICAL_EQUIPMENT);
+  const [bloodBanks, setBloodBanks] = useState<BloodBank[]>(MOCK_BLOOD_BANKS);
+  const [donors, setDonors] = useState<BloodDonor[]>(MOCK_BLOOD_DONORS);
   const [isSyncing, setIsSyncing] = useState(false);
 
   // Modals state
@@ -264,6 +270,91 @@ export default function App() {
     showToast('Doctor removed from directory');
   };
 
+  // Bulk Add Handlers for Excel Import
+  const handleBulkAddMedicines = async (newMeds: Medicine[]) => {
+    setMedicines((prev) => [...newMeds, ...prev]);
+    try {
+      for (const m of newMeds) {
+        await setDoc(doc(db, 'medicines', m.id), m);
+      }
+    } catch (err) {
+      console.warn('Firestore bulk write warning:', err);
+    }
+    showToast(`Imported ${newMeds.length} medicines via Excel`);
+  };
+
+  const handleBulkAddPackages = async (newPkgs: DiagnosticPackage[]) => {
+    setPackages((prev) => [...newPkgs, ...prev]);
+    try {
+      for (const p of newPkgs) {
+        await setDoc(doc(db, 'diagnosticPackages', p.id), p);
+      }
+    } catch (err) {
+      console.warn('Firestore bulk write warning:', err);
+    }
+    showToast(`Imported ${newPkgs.length} lab test packages via Excel`);
+  };
+
+  const handleBulkAddDoctors = async (newDocs: Doctor[]) => {
+    setDoctors((prev) => [...newDocs, ...prev]);
+    try {
+      for (const d of newDocs) {
+        await setDoc(doc(db, 'doctors', d.id), d);
+      }
+    } catch (err) {
+      console.warn('Firestore bulk write warning:', err);
+    }
+    showToast(`Imported ${newDocs.length} doctors via Excel`);
+  };
+
+  const handleBulkAddNurses = async (newNurses: HomeNurse[]) => {
+    setNurses((prev) => [...newNurses, ...prev]);
+    try {
+      for (const n of newNurses) {
+        await setDoc(doc(db, 'homeNurses', n.id), n);
+      }
+    } catch (err) {
+      console.warn('Firestore bulk write warning:', err);
+    }
+    showToast(`Imported ${newNurses.length} home care nurses via Excel`);
+  };
+
+  const handleBulkAddEquipment = async (newEquip: MedicalEquipment[]) => {
+    setEquipment((prev) => [...newEquip, ...prev]);
+    try {
+      for (const eq of newEquip) {
+        await setDoc(doc(db, 'medicalEquipment', eq.id), eq);
+      }
+    } catch (err) {
+      console.warn('Firestore bulk write warning:', err);
+    }
+    showToast(`Imported ${newEquip.length} equipment items via Excel`);
+  };
+
+  const handleBulkAddBloodBanks = async (newBanks: BloodBank[]) => {
+    setBloodBanks((prev) => [...newBanks, ...prev]);
+    try {
+      for (const bb of newBanks) {
+        await setDoc(doc(db, 'bloodBanks', bb.id), bb);
+      }
+    } catch (err) {
+      console.warn('Firestore bulk write warning:', err);
+    }
+    showToast(`Imported ${newBanks.length} blood banks via Excel`);
+  };
+
+  const handleBulkAddDonors = async (newDonors: BloodDonor[]) => {
+    setDonors((prev) => [...newDonors, ...prev]);
+    try {
+      for (const dn of newDonors) {
+        await setDoc(doc(db, 'bloodDonors', dn.id), dn);
+      }
+    } catch (err) {
+      console.warn('Firestore bulk write warning:', err);
+    }
+    showToast(`Imported ${newDonors.length} emergency donors via Excel`);
+  };
+
   const handleAddToCart = (medicine: Medicine) => {
     setCartItems((prev) => {
       const existing = prev.find((item) => item.id === medicine.id);
@@ -441,8 +532,8 @@ export default function App() {
 
         {activeTab === 'nursing' && (
           <HomeNursingView
-            nurses={MOCK_HOME_NURSES}
-            equipment={MOCK_MEDICAL_EQUIPMENT}
+            nurses={nurses}
+            equipment={equipment}
             onBookNurse={handleBookNurse}
             onRentEquipment={handleRentEquipment}
             currentLocation={currentLocation}
@@ -451,8 +542,8 @@ export default function App() {
 
         {activeTab === 'bloodbank' && (
           <BloodBankView
-            bloodBanks={MOCK_BLOOD_BANKS}
-            donors={MOCK_BLOOD_DONORS}
+            bloodBanks={bloodBanks}
+            donors={donors}
             currentLocation={currentLocation}
           />
         )}
@@ -487,12 +578,23 @@ export default function App() {
           medicines={medicines}
           packages={packages}
           doctors={doctors}
+          nurses={nurses}
+          equipment={equipment}
+          bloodBanks={bloodBanks}
+          donors={donors}
           onAddMedicine={handleAddMedicine}
           onDeleteMedicine={handleDeleteMedicine}
+          onBulkAddMedicines={handleBulkAddMedicines}
           onAddPackage={handleAddPackage}
           onDeletePackage={handleDeletePackage}
+          onBulkAddPackages={handleBulkAddPackages}
           onAddDoctor={handleAddDoctor}
           onDeleteDoctor={handleDeleteDoctor}
+          onBulkAddDoctors={handleBulkAddDoctors}
+          onBulkAddNurses={handleBulkAddNurses}
+          onBulkAddEquipment={handleBulkAddEquipment}
+          onBulkAddBloodBanks={handleBulkAddBloodBanks}
+          onBulkAddDonors={handleBulkAddDonors}
           onSeedToFirestore={handleSeedToFirestore}
           isSyncing={isSyncing}
           onClose={() => setShowAdminModal(false)}
